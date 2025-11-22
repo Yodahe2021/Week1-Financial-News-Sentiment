@@ -1,4 +1,4 @@
-# test_analysis.py
+# tests/test_analysis.py
 import pytest
 import os
 import sys
@@ -6,13 +6,19 @@ import sys
 # Add src folder to the path for importing modules
 sys.path.insert(0, os.path.abspath('src'))
 
-# Import the class we want to test
+# Import the classes we want to test
 from eda_pipeline import EDAPipeline
+# Import stock_analysis.py and the class inside it
+from stock_analysis import StockAnalyzer
 
 def test_pipeline_initialization():
-    """Test that the EDAPipeline initializes correctly."""
-    # Since the file path is required, we use a known-good placeholder
-    # The initialization should not raise an error
-    pipeline = EDAPipeline(file_path="dummy_path.csv")
+    """Test that the EDAPipeline initializes correctly (even without real data)."""
+    # Use a dummy path; the test only checks if the class can be created
+    pipeline = EDAPipeline(file_path="non_existent_news_file.csv")
     assert pipeline is not None
-    assert pipeline.file_path == "dummy_path.csv"
+    assert pipeline.df is None
+
+def test_stock_analyzer_initialization():
+    """Test that the StockAnalyzer initializes correctly."""
+    analyzer = StockAnalyzer(data_folder="../data/raw/yfinance data")
+    assert analyzer is not None
