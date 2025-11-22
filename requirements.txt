@@ -1,0 +1,24 @@
+# Data Manipulation
+pandas
+numpy
+
+# Data Acquisition & Finance
+yfinance
+pynance
+TA-Lib
+
+# Natural Language Processing (NLP)
+textblob
+nltk
+scikit-learn
+
+# Visualization
+matplotlib
+seaborn
+
+# Scientific Computing (for correlation)
+scipy
+
+# Development & Notebooks
+jupyter
+pytest
