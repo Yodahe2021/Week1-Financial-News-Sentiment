@@ -60,6 +60,38 @@ A robust CI pipeline using **GitHub Actions** is active. Any code push triggers 
 
 ### **Visualization Example**
 
-```markdown
 ![Top 10 Active Publishers Bar Chart](assets/Figure_3.png)
+
+# 💡 Key Technical Challenge (Focus for Task 3)
+
+The most significant hurdle in this project is the **time zone and date alignment** between:
+
+- **News timestamps** (UTC or local time zones)
+- **Stock market trading data** (EST/EDT trading sessions)
+
+The next phase will implement **precise time normalization**, ensuring that:
+
+- News released **after market close** is shifted to the **next trading day**  
+- All timestamps align with **actual market sessions**  
+- **Data leakage is avoided** by preventing future information from entering past labels  
+## 💻 How to Run the Project
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/Yodahe2021/Week1-Financial-News-Sentiment.git
+cd Week1-Financial-News-Sentiment
 ```
+### 2️⃣ Set Up the Python Environment
+
+```bash
+python -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
+### 3️⃣ Run the Analysis
+
+```bash
+jupyter notebook
+```
+
