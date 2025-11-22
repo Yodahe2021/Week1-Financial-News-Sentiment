@@ -23,26 +23,35 @@ This repository documents the foundational infrastructure and analysis for the 1
 ```mermaid
 flowchart TD
     Root["Repository Root"]
+
+    %% Infrastructure
     Root --> GH[.github/]
     GH --> WF[workflows/]
-    WF --> UT[unittest.yml]
+    WF --> UT["unittest.yml"]
+
+    %% Data Storage
     Root --> Data[data/]
     Data --> Clean[clean/]
     Data --> Raw[raw/]
-    Raw --> News[news_data/]
-    News --> Ratings[raw_analyst_ratings.csv]
-    Raw --> YF[yfinance_data/]
-    YF --> AAPL[AAPL.csv]
+    Raw --> News["news data/"]
+    News --> Ratings["raw_analyst_ratings.csv"]
+    Raw --> YF["yfinance data/"]
+    YF --> AAPL["AAPL.csv"]
     YF --> Tickers["... (other tickers)"]
+
+    %% Analysis & Code
     Root --> Notebooks[notebooks/]
-    Notebooks --> EDA[1_exploratory_data_analysis.ipynb]
+    Notebooks --> EDA["1_exploratory_data_analysis.ipynb"]
     Root --> Scripts[scripts/]
     Root --> Src[src/]
-    Src --> Pipeline[eda_pipeline.py]
-    Src --> Analysis[stock_analysis.py]
+    Src --> Pipeline["eda_pipeline.py"]
+    Src --> Utils["utils.py"]
+    Src --> Analysis["stock_analysis.py"]
+
+    %% Testing & Config
     Root --> Tests[tests/]
-    Tests --> TestAnalysis[test_analysis.py]
-    Root --> Req[requirements.txt]
+    Tests --> TestAnalysis["test_analysis.py"]
+    Root --> Req["requirements.txt"]
 ```
 
 ### **Continuous Integration (CI/CD)**
