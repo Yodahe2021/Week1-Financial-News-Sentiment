@@ -9,45 +9,42 @@ This repository documents the foundational infrastructure and analysis for the 1
 ## 🚀 Project Status and Deliverables (Interim Report)
 
 | Component | Status | Deliverable |
-| :--- | :--- | :--- |
-| **Task 1: Infrastructure** | **COMPLETE** ✅ | Full Git/GitHub workflow, clear structure, and active CI/CD pipeline. |
-| **Task 2: Quantitative Prep** | **COMPLETE** ✅ | Technical indicators (RSI, MACD, SMA) calculated using TA-Lib. |
-| **Interim Report** | **COMPLETED** ✅ | Report submitted detailing initial findings and methodology. |
-| **Next Phase** | Sentiment Scoring & Correlation Testing (Task 3). | |
+|----------|--------|-------------|
+| **Task 1: Infrastructure** | ✅ COMPLETE | Full Git/GitHub workflow, clear structure, and CI/CD pipeline. |
+| **Task 2: Quantitative Prep** | ✅ COMPLETE | Technical indicators (RSI, MACD, SMA) calculated using TA-Lib. |
+| **Interim Report** | ✅ COMPLETE | Report submitted detailing initial findings and methodology. |
+| **Next Phase** | 🔄 In Progress | Sentiment Scoring & Correlation Testing (Task 3). |
 
 ---
 
 ## 🛠️ Project Structure and Infrastructure
 
-The project follows a standard, reproducible structure:
-Project Structure
-.
-├── .github/
-│   └── workflows/
-│       └── unittests.yml
-│
-├── data/
-│   ├── clean/
-│   └── raw/
-│       ├── news_data/
-│       │   └── raw_analyst_ratings.csv
-│       └── yfinance_data/
-│           ├── AAPL.csv
-│           └── ... (other tickers)
-│
-├── notebooks/
-│   └── 1_exploratory_data_analysis.ipynb
-│
-├── scripts/
-│
-├── src/
-│   ├── eda_pipeline.py
-│   └── stock_analysis.py
-│
-├── tests/
-│   └── test_analysis.py
-│
-└── requirements.txt
+
+```mermaid
+flowchart TD
+    Root["Repository Root"]
+    Root --> GH[.github/]
+    GH --> WF[workflows/]
+    WF --> UT[unittest.yml]
+    Root --> Data[data/]
+    Data --> Clean[clean/]
+    Data --> Raw[raw/]
+    Raw --> News[news_data/]
+    News --> Ratings[raw_analyst_ratings.csv]
+    Raw --> YF[yfinance_data/]
+    YF --> AAPL[AAPL.csv]
+    YF --> Tickers["... (other tickers)"]
+    Root --> Notebooks[notebooks/]
+    Notebooks --> EDA[1_exploratory_data_analysis.ipynb]
+    Root --> Scripts[scripts/]
+    Root --> Src[src/]
+    Src --> Pipeline[eda_pipeline.py]
+    Src --> Analysis[stock_analysis.py]
+    Root --> Tests[tests/]
+    Tests --> TestAnalysis[test_analysis.py]
+    Root --> Req[requirements.txt]
+```
+
 ### **Continuous Integration (CI/CD)**
 
 A robust CI pipeline using **GitHub Actions** is active. Any code push triggers `pytest` to ensure all core modules are functional and stable.
@@ -64,5 +61,5 @@ A robust CI pipeline using **GitHub Actions** is active. Any code push triggers 
 ### **Visualization Example**
 
 ```markdown
-![Top 10 Active Publishers Bar Chart](assets/figure_3.png)
-
+![Top 10 Active Publishers Bar Chart](assets/Figure_3.png)
+```
