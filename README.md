@@ -10,10 +10,10 @@ This repository documents the foundational infrastructure and analysis for the 1
 
 | Component | Status | Deliverable |
 |----------|--------|-------------|
-| **Task 1: Infrastructure** | ✅ COMPLETE | Full Git/GitHub workflow, clear structure, and CI/CD pipeline. |
-| **Task 2: Quantitative Prep** | ✅ COMPLETE | Technical indicators (RSI, MACD, SMA) calculated using TA-Lib. |
-| **Interim Report** | ✅ COMPLETE | Report submitted detailing initial findings and methodology. |
-| **Next Phase** | 🔄 In Progress | Sentiment Scoring & Correlation Testing (Task 3). |
+| **Task 1: Infrastructure & EDA** | ✅ COMPLETE | Full Git/GitHub workflow, modular structure, and initial EDA. |
+| **Task 2: Quantitative Prep** | ✅ COMPLETE | Technical indicators (RSI, MACD, SMA) calculated and modularly refactored. |
+| **Task 3: Analysis & Correlation** | ✅ COMPLETE | Sentiment scoring, Date Alignment Solution, and correlation analysis performed. |
+| **Final Report** | ✅ COMPLETE | Report submitted detailing all findings and methodology. |
 
 ---
 
@@ -103,4 +103,3 @@ pip install -r requirements.txt
 ```bash
 jupyter notebook
 ```
-
