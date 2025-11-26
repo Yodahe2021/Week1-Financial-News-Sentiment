@@ -6,12 +6,7 @@ import os
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
 def get_full_path(relative_path):
-    """
-    Constructs the absolute path from the project root.
-    
-    Args:
-        relative_path (str): Path relative to the project root (e.g., 'data/raw/file.csv').
-    """
+    full_path = os.path.join(PROJECT_ROOT, relative_path)
     return os.path.join(PROJECT_ROOT, relative_path)
 
 def load_csv_data(relative_path, **kwargs):
